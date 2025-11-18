@@ -19,6 +19,9 @@ def main():
             target_month = input("Enter month in MM format")
             target_year = input("Enter year in YYYY format")
             chr.createPieChart_monthly(target_month, target_year)
+        if(c2 == 2):
+            chr.createBarGraph()
+        
     elif(ch == 3):
         print("Currency convertor")
     # TODO: Currency conversion code

@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 import csv
 def createPieChart_monthly(target_month, target_year):
     categorytotals = {}
@@ -7,12 +8,12 @@ def createPieChart_monthly(target_month, target_year):
         reader = csv.reader(csvfile)
         next(reader)
         for row in reader:
-            date_str = row[1].strip()
+            date_str = row[1]
             amount = row[0]
             category = row[3]
 
-            month = date_str[5:7].strip()
-            year = date_str[:4].strip()
+            month = date_str[5:7]
+            year = date_str[:4]
 
             if month == target_month and year == target_year:
                 if category not in categorytotals:
@@ -24,7 +25,28 @@ def createPieChart_monthly(target_month, target_year):
         plt.pie(values, labels = labels, autopct="%1.1f%%")
         plt.title("Monthly savings")
         plt.show()
+    
 
+def createBarGraph():
+    x = {}
+    with open("src/services/Transactions.csv", newline="") as csvfile:
+        reader = csv.reader(csvfile)
+        next(reader)
+        for row in reader:
+            date = row[1]
+            amount = row[0]
 
+            date = date[:7]
+            
+            if date not in x:
+                x[date] = 0
+            x[date] += float(amount)
+
+    months = list(x.keys())
+    amounts = list(x.values())
+    plt.bar(months,amounts)
+    plt.show()
+
+createBarGraph()
 
             
