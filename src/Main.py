@@ -22,6 +22,11 @@ def main():
         if(c2 == 2):
             chr.createBarGraph()
         
+        if(c2 == 3):
+            target_date = input("Enter month in YYYY-MM format")
+            chr.createLinePlot(target_date)
+
+
     elif(ch == 3):
         print("Currency convertor")
     # TODO: Currency conversion code

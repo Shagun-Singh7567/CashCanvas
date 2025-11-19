@@ -11,7 +11,7 @@ def createPieChart_monthly(target_month, target_year):
             date_str = row[1]
             amount = row[0]
             category = row[3]
-
+            
             month = date_str[5:7]
             year = date_str[:4]
 
@@ -47,6 +47,33 @@ def createBarGraph():
     plt.bar(months,amounts)
     plt.show()
 
-createBarGraph()
+def createLinePlot(target_month):
+    monthtotals = {}
+
+    with open("src/services/Transactions.csv", newline="") as csvfile:
+        reader = csv.reader(csvfile)
+        next(reader)
+        for row in reader:
+            date_str = row[1]
+            amount = row[0]
+
+            month_date_str = date_str[:7]
+
+            if(month_date_str == target_month):
+                if date_str not in monthtotals:
+                    monthtotals[date_str] = 0
+
+                monthtotals[date_str] += float(amount)
+
+        
+        labels = list(monthtotals.keys())
+        values = list(monthtotals.values())
+        plt.scatter(labels,values)
+        plt.plot(labels, values, linestyle= "dashed")
+        plt.title("Monthly savings")
+        plt.show()
+createLinePlot("2024-09")
+
+
 
             

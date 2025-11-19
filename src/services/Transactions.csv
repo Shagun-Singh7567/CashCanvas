@@ -1,6 +1,49 @@
 Amount,Date,Description,Category
-1200,2025-11-17,Groceries,Food
-1500,2025-11-17,New Headphones,Tech
-4000,2025-11-17,Online Shopping,Shopping
-1000,2025-11-17,Food,Food
-1200,2025-11-18,Buying hoodie,Online shopping
+159.99,2025-01-03,Electricity Bill,Utilities
+45.00,2025-01-14,Cafe Latte & Sandwich,Food
+799.00,2025-02-05,New Headphones,Shopping
+120.00,2025-02-16,Auto Rickshaw,Transport
+250.00,2025-02-27,Grocery Run,Groceries
+60.00,2025-03-03,Mobile Recharge,Utilities
+999.00,2025-03-11,Online Course,Education
+30.00,2025-03-22,Ice Cream,Food
+149.00,2025-04-01,Netflix Subscription,Entertainment
+500.00,2025-04-12,Friend’s Birthday Gift,Shopping
+80.00,2025-04-17,Stationery,Education
+200.00,2025-04-29,Dinner Out,Food
+55.00,2025-05-02,Snacks,Food
+1400.00,2025-05-16,College Books,Education
+90.00,2025-05-20,Cab Ride,Transport
+350.00,2025-05-29,Groceries,Groceries
+220.00,2025-06-03,Movie Tickets,Entertainment
+75.00,2025-06-10,Breakfast,Food
+60.00,2025-06-19,Bus Pass Top-Up,Transport
+289.00,2025-06-27,Skincare,Shopping
+40.00,2025-07-06,Samosa & Tea,Food
+450.00,2025-07-14,Gym Membership,Health
+35.00,2025-07-23,Bread & Eggs,Groceries
+180.00,2025-07-29,Friend Hangout Snacks,Food
+500.00,2025-08-04,Udemy Course,Education
+29.00,2025-08-14,Cloud Storage,Utilities
+390.00,2025-08-21,New Hoodie,Shopping
+25.00,2025-08-30,Chocolate,Food
+130.00,2025-09-05,Auto Fare,Transport
+210.00,2025-09-15,Mini Grocery Trip,Groceries
+99.00,2025-09-23,Spotify Premium,Entertainment
+120.00,2025-09-30,Lunch Canteen,Food
+650.00,2025-10-06,Doctor Visit,Health
+55.00,2025-10-13,Pens & Notes,Education
+1800.00,2025-10-20,Hostel Fees,Utilities
+90.00,2025-10-28,Burger Meal,Food
+70.00,2025-11-02,Diesel Share,Transport
+320.00,2025-11-11,Haircut & Grooming,Shopping
+40.00,2025-11-21,Biscuits & Juice,Food
+500.00,2025-11-29,Tuition Fee,Education
+260.00,2025-12-02,Groceries,Groceries
+500.00,2025-12-09,Data Plan,Utilities
+150.00,2025-12-15,Winter Treat,Food
+300.00,2025-12-20,Game Purchase,Entertainment
+120.00,2025-12-24,Cab Ride,Transport
+420.00,2025-12-27,Shirt Purchase,Shopping
+60.00,2025-12-30,Canteen Snacks,Food
+700.00,2025-12-31,Blood Test,Health
