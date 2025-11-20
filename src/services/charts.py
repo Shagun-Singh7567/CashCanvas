@@ -18,16 +18,20 @@ def createPieChart_monthly(target_month, target_year):
             if month == target_month and year == target_year:
                 if category not in categorytotals:
                     categorytotals[category] = 0
-
                 categorytotals[category] += float(amount)
+
         labels = list(categorytotals.keys())
         values = list(categorytotals.values())
+
+        if(labels == [] and labels == []):
+            print("Sorry, no records found!")
+
         plt.pie(values, labels = labels, autopct="%1.1f%%")
         plt.title("Monthly savings")
         plt.show()
     
 
-def createBarGraph():
+def createBarGraph(target_year):
     x = {}
     with open("src/services/Transactions.csv", newline="") as csvfile:
         reader = csv.reader(csvfile)
@@ -38,13 +42,15 @@ def createBarGraph():
 
             date = date[:7]
             
-            if date not in x:
-                x[date] = 0
-            x[date] += float(amount)
+            if target_year == date[:4]:
+                if date not in x:
+                    x[date] = 0
+                x[date] += float(amount)
 
     months = list(x.keys())
     amounts = list(x.values())
     plt.bar(months,amounts)
+    plt.xticks(rotation = 45)
     plt.show()
 
 def createLinePlot(target_month):
@@ -68,11 +74,15 @@ def createLinePlot(target_month):
         
         labels = list(monthtotals.keys())
         values = list(monthtotals.values())
+
+        if(labels == [] and labels == []):
+            print("Sorry, no records found!")
+
         plt.scatter(labels,values)
-        plt.plot(labels, values, linestyle= "dashed")
+        plt.plot(labels, values, linestyle= "solid")
         plt.title("Monthly savings")
+        plt.xticks(rotation = 45)
         plt.show()
-createLinePlot("2024-09")
 
 
 
