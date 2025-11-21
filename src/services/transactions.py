@@ -28,4 +28,5 @@ def storeTransaction(data): # Function to store the data in the list to a csv
         writer.writerow(data)
 
 
-    
+
+
