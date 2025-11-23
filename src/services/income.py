@@ -1,15 +1,25 @@
 from datetime import date
 import csv
+from rich.console import Console
+from rich.table import Table
 
 data = []
 
 def displayhistory():
-    print("Sources of income: ")
+    table = Table(title="Transactions made")
+    table.add_column("Amount", style="green")
+    table.add_column("Date")
+    table.add_column("Source")
     with open("src/services/Income.csv", newline="") as csvfile:
         reader = csv.reader(csvfile) # Here, the reader variable stores the contents of the csv file
         next(reader)
         for row in csvfile:
-            print(row)
+            values = row.split(",")
+            table.add_row(*values)
+    
+    console = Console()
+    console.print(table)
+
 
 def makeIncomeRecord(): # Function to make a transaction
     amt = input("Enter the amount of income: ")
