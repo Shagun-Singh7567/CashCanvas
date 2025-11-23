@@ -18,7 +18,6 @@ def makeTransaction(): # Function to make a transaction
     reason = input("Enter the purpose of making the transaction: ")
     category = input("Enter the category of the transaction: ")
     data = [amt, current_date, reason, category]
-    print(data)
 
     storeTransaction(data)
 
