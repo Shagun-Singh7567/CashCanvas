@@ -16,23 +16,22 @@ CSV Persistence – Your data stays safe between sessions.
 
 
 ## Technologies & Tools Used
-    Python 3.13.7
+Python 3.13.7
 
-    Matplotlib – For plotting the transactions.
+Matplotlib – For plotting the transactions.
 
-    CSV File Storage – Lightweight local database.
+CSV File Storage – Lightweight local database.
 
 
 ## Steps to Install & Run
 1. Clone the Repository
-Run the following commands on the git bash terminal:
+Run the following commands on the git bash terminal:<br>
     git clone https://github.com/Shagun-Singh7567/CashCanvas
-    cd CashCanvas
 2. Install dependancies
-On the terminal, run the following commands to install the required libraries:
-    pip install matplotlib
+On the terminal, run the following commands to install the required libraries:<br>
+    pip install matplotlib<br>
     pip install rich
-3. Run the App
+3. Run the App<br>
     python main.py
 
 
