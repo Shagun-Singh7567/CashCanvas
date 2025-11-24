@@ -4,7 +4,7 @@ import csv
 def createPieChart_monthly(target_month, target_year):
     categorytotals = {}
 
-    with open("src/services/Transactions.csv", newline="") as csvfile:
+    with open("src/data/Transactions.csv", newline="") as csvfile:
         reader = csv.reader(csvfile)
         next(reader)
         for row in reader:
@@ -33,7 +33,7 @@ def createPieChart_monthly(target_month, target_year):
 
 def createBarGraph(target_year):
     x = {}
-    with open("src/services/Transactions.csv", newline="") as csvfile:
+    with open("src/data/Transactions.csv", newline="") as csvfile:
         reader = csv.reader(csvfile)
         next(reader)
         for row in reader:
@@ -56,7 +56,7 @@ def createBarGraph(target_year):
 def createLinePlot(target_month):
     monthtotals = {}
 
-    with open("src/services/Transactions.csv", newline="") as csvfile:
+    with open("src/data/Transactions.csv", newline="") as csvfile:
         reader = csv.reader(csvfile)
         next(reader)
         for row in reader:

@@ -16,7 +16,6 @@ def main():
             elif(c1 == 2):
                 tr.makeTransaction()
             elif(c1 == 3):
-                print("")
                 return 0
             else:
                 print("Wrong choice, please try again")
