@@ -4,6 +4,7 @@ from ui.pages.dashboard    import DashboardPage
 from ui.pages.transactions import TransactionsPage
 from ui.pages.income       import IncomePage
 from ui.pages.charts       import ChartsPage
+from ui.pages.ai_assistant import AIAssistantPage
 from data.store import ensure_files
 
 ensure_files()
@@ -21,13 +22,12 @@ class CashCanvas(ctk.CTk):
         self._build_content()
         self.show_page("dashboard")
 
-    # ── Sidebar ────────────────────────────────────────────────────────────────
+    # Sidebar
     def _build_sidebar(self):
         self.sidebar = ctk.CTkFrame(self, width=210, fg_color=SURFACE, corner_radius=0)
         self.sidebar.pack(side="left", fill="y")
         self.sidebar.pack_propagate(False)
 
-        # Logo
         logo_frame = ctk.CTkFrame(self.sidebar, fg_color="transparent")
         logo_frame.pack(fill="x", padx=22, pady=(28, 18))
         ctk.CTkLabel(logo_frame, text="CashCanvas",
@@ -37,13 +37,13 @@ class CashCanvas(ctk.CTk):
 
         ctk.CTkFrame(self.sidebar, height=1, fg_color=BORDER).pack(fill="x")
 
-        # Nav buttons
         self.nav_buttons = {}
         nav_items = [
             ("dashboard",    "◈  Dashboard"),
             ("transactions", "↕  Transactions"),
             ("income",       "↑  Income"),
             ("charts",       "◎  Charts"),
+            ("ai_assistant", "✦  AI Assistant"),
         ]
         nav_frame = ctk.CTkFrame(self.sidebar, fg_color="transparent")
         nav_frame.pack(fill="x", pady=(16, 0))
@@ -68,7 +68,7 @@ class CashCanvas(ctk.CTk):
             else:
                 btn.configure(text_color=MUTED, fg_color="transparent")
 
-    # ── Content area ───────────────────────────────────────────────────────────
+    # Content area
     def _build_content(self):
         self.content = ctk.CTkFrame(self, fg_color=BG, corner_radius=0)
         self.content.pack(side="left", fill="both", expand=True)
@@ -79,6 +79,7 @@ class CashCanvas(ctk.CTk):
             ("transactions", TransactionsPage),
             ("income",       IncomePage),
             ("charts",       ChartsPage),
+            ("ai_assistant", AIAssistantPage),
         ]:
             page = cls(self.content, self)
             page.place(relx=0, rely=0, relwidth=1, relheight=1)
@@ -91,7 +92,7 @@ class CashCanvas(ctk.CTk):
                 page.lift()
                 page.on_show()
 
-    # ── Toast notification ─────────────────────────────────────────────────────
+    # Toast notification
     def toast(self, msg, error=False):
         color = RED if error else ACCENT
         t = ctk.CTkToplevel(self)
